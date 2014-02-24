@@ -1,6 +1,6 @@
-#======================#
-$   Timetracker v.1.0  $
-#======================#
+Timetracker v.1.0
+=================
+
 A web-based Timetracker written in PHP.
 
 1. Installation
@@ -85,6 +85,6 @@ Blog: niklas-rother.de (in German)
 6. Version History
 ------------------
 
-Version 1.0
-...........
-First public version.
+* Version 1.0
+
+  First public version.
