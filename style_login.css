@@ -1,0 +1,53 @@
+/*
+    TimeTracker
+    Copyright (C) 2014 Niklas Rother
+
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*/
+
+body {
+	background-color: lightgray;
+	font-family: Verdana,Arial,sans-serif;
+}
+
+h2 {
+	text-align: center;
+}
+
+#login_box {
+	background-color: white;
+	width: 370px;
+	margin: 3em auto;
+	padding: 1em;
+	border-radius: 20px;
+	text-align: right;
+	box-shadow: 0 0 70px gray;
+}
+
+#error {
+	text-align: center;
+	color: red;
+	font-weight: bold;
+	padding-bottom: 0.5em;
+}
+
+#login_box input {
+	margin-left: 4px;
+}
+
+/* Fix for right aligned checkbox */
+#login_remember_row {
+	text-align: left;
+}
