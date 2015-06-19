@@ -78,6 +78,7 @@ Filter:
 	<thead>
         <tr>
             <th>Datum</th>
+            <th>Uhrzeit</th>
             <th>Dauer</th>
             <th>Kommentar</th>
         </tr>
@@ -97,6 +98,8 @@ $(document).ready(function(){
 <form id="form-new-entry">
 	<label for="date">Datum:</label>
 	<input type="text" id="date" class="textbox" maxlength="8" />
+	<label for="time">Uhrzeit:</label>
+	<input type="text" id="time" maxlength="5" />
 	<label for="duration">Dauer:</label>
 	<input type="text" id="duration" maxlength="5" />
 	<label for="comment" id="label-comment">Kommentar:</label>

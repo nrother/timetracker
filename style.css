@@ -46,11 +46,16 @@ body {
 
 #date {
 	text-align: center;
-	width: 6em;
+	width: 4em;
+}
+
+#time {
+	text-align: center;
+	width: 4em;
 }
 
 #duration {
-	width: 4em;
+	width: 6em;
 	text-align: center;
 }
 
