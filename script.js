@@ -42,6 +42,7 @@ $(document).ready(function() {
 		},
 		"aoColumns": [
 			{ "sTitle": "Datum", "sClass": "center" },
+			{ "sTitle": "Uhrzeit", "sClass": "center" },
 			{ "sTitle": "Dauer", "sClass": "center" },
 			{ "sTitle": "Kommentar" },
 		]
@@ -90,6 +91,7 @@ $(document).ready(function() {
 	});
 	$("#date").datepicker();
 	$("#date").datepicker("option", "dateFormat", "dd.mm.y");
+	$("#time").timespinner().val("00:00");
 	$("#duration").timespinner().val("00:00");
 	var durationTimer;
 	$("#save").button().click(function(event){
@@ -107,6 +109,7 @@ $(document).ready(function() {
 			$("#saving").show();
 			$.post("savetime.php", {
 				date: $("#date").val(),
+				time: $("#time").val(),
 				duration: $("#duration").val(),
 				comment: $("#comment").val()
 			}, function(data){

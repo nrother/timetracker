@@ -24,6 +24,7 @@ require_once "db.php";
 $date = mysql_real_escape_string($_POST['date']);
 $duration = mysql_real_escape_string($_POST['duration']);
 $comment = mysql_real_escape_string($_POST['comment']);
+$time = mysql_real_escape_string($_POST['comment']);
 
 list($day, $month, $year) = explode('.', $date);
 
@@ -31,6 +32,6 @@ $date = date('Y-m-d', mktime(0, 0, 0, $month, $day, $year));
 
 $uid = $_SESSION["uid"];
 
-mysql_query("INSERT INTO data (uid, date, duration, comment) VALUES ('$uid', '$date', '$duration', '$comment')");
+mysql_query("INSERT INTO data (uid, date, time, duration, comment) VALUES ('$uid', '$date', '$time', '$duration', '$comment')");
 echo mysql_error();
 ?>

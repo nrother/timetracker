@@ -30,15 +30,15 @@ require_once "db.php";
 <link rel="icon" href="favicon.ico" type="image/x-icon" />
 <link rel="stylesheet" type="text/css" href="style.css">
 <!-- DataTables CSS, jQuery, DataTables, jQuery UI, jQuery UI Lightness, etc. -->
-<script type="text/javascript" charset="utf-8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
-<script src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.9.0/jquery-ui.min.js"></script> 
-<link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.9.0/themes/smoothness/jquery-ui.css">
+<script type="text/javascript" charset="utf-8" src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
+<script src="//ajax.aspnetcdn.com/ajax/jquery.ui/1.9.0/jquery-ui.min.js"></script> 
+<link rel="stylesheet" type="text/css" href="//ajax.aspnetcdn.com/ajax/jquery.ui/1.9.0/themes/smoothness/jquery-ui.css">
 <script type="text/javascript" charset="utf-8" src="globalize.js"></script>
 <script type="text/javascript" charset="utf-8" src="globalize.culture.de-DE.js"></script>
 <script type="text/javascript" charset="utf-8" src="jquery.mousewheel.js"></script>
-<script type="text/javascript" charset="utf-8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="//ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
 <script type="text/javascript" charset="utf-8" src="script.js"></script>
-<link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables_themeroller.css">
+<link rel="stylesheet" type="text/css" href="//ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables_themeroller.css">
 </head>
 <body>
 <h1>Timetracker</h1>
@@ -78,6 +78,7 @@ Filter:
 	<thead>
         <tr>
             <th>Datum</th>
+            <th>Uhrzeit</th>
             <th>Dauer</th>
             <th>Kommentar</th>
         </tr>
@@ -97,6 +98,8 @@ $(document).ready(function(){
 <form id="form-new-entry">
 	<label for="date">Datum:</label>
 	<input type="text" id="date" class="textbox" maxlength="8" />
+	<label for="time">Uhrzeit:</label>
+	<input type="text" id="time" maxlength="5" />
 	<label for="duration">Dauer:</label>
 	<input type="text" id="duration" maxlength="5" />
 	<label for="comment" id="label-comment">Kommentar:</label>

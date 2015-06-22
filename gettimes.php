@@ -32,12 +32,12 @@ if($month > 0)
 if($year > 0)
 	$filter .= "AND YEAR(date) = $year";
 
-$q = mysql_query("SELECT date, duration, comment FROM data WHERE uid = $uid $filter");
+$q = mysql_query("SELECT date, time, duration, comment FROM data WHERE uid = $uid $filter");
 $json = array();
 while($r = mysql_fetch_assoc($q))
 {
 	//Ausgabe etwas umformatieren
-	$json[] = array(date('d.m.y', strtotime($r['date'])), substr($r['duration'], 0, 5) , $r['comment']);
+	$json[] = array(date('d.m.y', strtotime($r['date'])), substr($r['time'], 0, 5) ,substr($r['duration'], 0, 5) , $r['comment']);
 }
 echo json_encode(array('aaData' => $json));
 ?>

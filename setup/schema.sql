@@ -35,6 +35,7 @@ CREATE TABLE IF NOT EXISTS `data` (
   `date` date NOT NULL,
   `duration` time NOT NULL,
   `comment` varchar(100) DEFAULT NULL,
+  `time` time NOT NULL
   PRIMARY KEY (`id`),
   KEY `uid` (`uid`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
