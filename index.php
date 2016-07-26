@@ -67,10 +67,9 @@ Filter:
 	</select>
 	<select name="year" id="year" class="filter">
 		<option <?php echo $year == 0 ? 'selected="selected"':"" ?> value="0">---</option>
-		<option <?php echo $year == 2011 ? 'selected="selected"':"" ?> value="2011">2011</option>
-		<option <?php echo $year == 2012 ? 'selected="selected"':"" ?> value="2012">2012</option>
-		<option <?php echo $year == 2013 ? 'selected="selected"':"" ?> value="2013">2013</option>
-		<option <?php echo $year == 2014 ? 'selected="selected"':"" ?> value="2014">2014</option>
+		<?php for ($i = 2011; $i <= date('Y')+1; $i++): ?>
+			<option <?php echo $year == $i ? 'selected="selected"':"" ?> value="<?php echo $i ?>"><?php echo $i ?></option>
+		<?php endfor; ?>
 	</select>
 </div><br />
 
