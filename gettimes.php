@@ -37,7 +37,15 @@ $json = array();
 while($r = mysql_fetch_assoc($q))
 {
 	//Ausgabe etwas umformatieren
-	$json[] = array(date('d.m.y', strtotime($r['date'])), substr($r['duration'], 0, 5) , $r['comment']);
+	$json[] = array(translate_weekday(date('w', strtotime($r['date']))), date('d.m.y', strtotime($r['date'])), substr($r['duration'], 0, 5) , $r['comment']);
 }
 echo json_encode(array('aaData' => $json));
+
+function translate_weekday($day) {
+	$days = array('So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa');
+	if ($day >= 0 && $day < 7)
+		return $days[$day];
+	else
+		return '??';
+}
 ?>

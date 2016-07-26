@@ -19,10 +19,11 @@
 
 $(document).ready(function() {
 	//Times-Table
-	$('#times').dataTable( {
+	var table = $('#times').dataTable( {
 		"bProcessing": true,
 		"bJQueryUI": true,
 		"sAjaxSource": 'gettimes.php',
+		"aaSorting": [[1, 'asc']],
 		"oLanguage": {
 			"sProcessing":   "Bitte warten...",
 			"sLengthMenu":   "_MENU_ Einträge anzeigen",
@@ -41,6 +42,7 @@ $(document).ready(function() {
 			}
 		},
 		"aoColumns": [
+			{ "sTitle": "Wochentag", "sClass": "center", "sWidth": "5em" },
 			{ "sTitle": "Datum", "sClass": "center" },
 			{ "sTitle": "Dauer", "sClass": "center" },
 			{ "sTitle": "Kommentar" },

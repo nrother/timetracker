@@ -76,6 +76,7 @@ Filter:
 <table id="times">
 	<thead>
         <tr>
+			<th>Wochentag</th>
             <th>Datum</th>
             <th>Dauer</th>
             <th>Kommentar</th>
