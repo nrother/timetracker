@@ -89,6 +89,7 @@ Filter:
 <script type="text/javascript">
 $(document).ready(function(){
 	$('#date').val("<?php echo date("d.m.y"); ?>");
+	$('#time').val("<?php echo date("H:i"); ?>");
 });
 </script>
 
@@ -97,6 +98,8 @@ $(document).ready(function(){
 <form id="form-new-entry">
 	<label for="date">Datum:</label>
 	<input type="text" id="date" class="textbox" maxlength="8" />
+	<label for="time">Zeit:</label>
+	<input type="time" id="time" maxlength="5" />
 	<label for="duration">Dauer:</label>
 	<input type="text" id="duration" maxlength="5" />
 	<label for="comment" id="label-comment">Kommentar:</label>

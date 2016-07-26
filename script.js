@@ -93,9 +93,9 @@ $(document).ready(function() {
 	$("#date").datepicker();
 	$("#date").datepicker("option", "dateFormat", "dd.mm.y");
 	$("#duration").timespinner().val("00:00");
-	var durationTimer;
+	$("#time").timespinner();
 	$("#save").button().click(function(event){
-		if(!$('#date').val().match(/[0-3][0-9]\.[0-1][0-9]\.[1-2][0-9]/) || !$('#duration').val().match(/[0-2][0-9]:[0-5][0-9]/))
+		if(!$('#date').val().match(/[0-3][0-9]\.[0-1][0-9]\.[1-2][0-9]/) || !$('#duration').val().match(/[0-2][0-9]:[0-5][0-9]/) || !$('#time').val().match(/[0-2][0-9]:[0-5][0-9]/))
 		{
 			$("#dialog-error").dialog({
 				width: 400,
@@ -109,6 +109,7 @@ $(document).ready(function() {
 			$("#saving").show();
 			$.post("savetime.php", {
 				date: $("#date").val(),
+				time: $("#time").val(),
 				duration: $("#duration").val(),
 				comment: $("#comment").val()
 			}, function(data){

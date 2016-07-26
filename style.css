@@ -49,9 +49,13 @@ body {
 	width: 6em;
 }
 
-#duration {
+#duration, #time {
 	width: 4em;
 	text-align: center;
+}
+
+label[for=duration] {
+	padding-left: 22px;
 }
 
 #label-comment {
